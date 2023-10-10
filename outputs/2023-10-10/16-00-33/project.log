@@ -1,0 +1,3 @@
+[2023-10-10 16:00:40,247][root][ERROR] - An error occurred, Interpolation key 'secrets.api_key' not found
+    full_key: api.api_key
+    object_type=dict

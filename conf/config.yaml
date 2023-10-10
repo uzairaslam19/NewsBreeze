@@ -1,0 +1,14 @@
+path:
+  json_output: ${hydra:runtime.cwd}/data/news_data.json
+  cleaned_json_output: ${hydra:runtime.cwd}/data/cleaned_news.json
+  summary_output: ${hydra:runtime.cwd}/data/summary_news.json
+db:
+  host: localhost
+  port: 5432
+api:
+  api_key: pub_3039276beafd7648df503a15518f09680da0b
+  open_api_key: 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
+images:
+  logo: ${hydra:runtime.cwd}/images/logo.png
+  dalle: ${hydra:runtime.cwd}/images/DALL-E.png
+  dalle2: ${hydra:runtime.cwd}/images/DALL-E2.png
