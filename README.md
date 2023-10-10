@@ -23,13 +23,13 @@
 - [LICENSE](#configuration)
 - [Acknowledgements](#acknowledgements)
 
-<img src="/images/Dall-E.png" alt="App Screenshot" width="100" height="100">
+<img src="images/Dall-E.png" alt="Dall-e" width="100" height="100">
 
 ## __Description__
 
 The News Scraping and Summarization App is a simple Python application that allows users to scrape news articles based on a keyword and optionally summarize them. The app provides a user-friendly interface built using dearpygui and utilizes Hydra for configuration. The app utilizes openai api to call Chatgpt or GPT3.5 turbo model to summarise the collected news. Once the User provides a keyword, and selects the number of news articles required (Max 5). The App utilizes a  Scrapy Spider  to collect the relevant news Articles using NewsData.io API. 
 
-<img src="/images/Dall-E2.png" alt="App Screenshot" width="100" height="100">
+<img src="images/Dall-E2.png" alt="Dall-e2" width="100" height="100">
 
 ## __Built With__
 * [![Scrapy][scrapy.py]][scrapy-url]
