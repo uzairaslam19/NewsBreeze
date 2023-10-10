@@ -19,16 +19,16 @@ logging.getLogger("news").setLevel(logging.ERROR)
 logging.basicConfig(level=logging.ERROR) 
 logging.getLogger("urllib3").setLevel(logging.ERROR)
 #Store the logs to a file called app.log
-logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename = 'app.log', filemode = 'w', format = '%(name)s - %(levelname)s - %(message)s')
 
 #----------------Global Variables-------------------------#
 # Global variable to store scraped news
 scraped_news = []
-f=Figlet(font='fender')
+f = Figlet(font = 'fender')
 
 #---------------------------Main Function-----------------#
 @hydra.main(version_base=None, config_path="conf/", config_name="config")
-def main(cfg,keyword=None,max_news=None,summ_option=None):
+def main(cfg, keyword = None, max_news = None, summ_option = None):
     """
     The main function of the News Breeze application.
     
@@ -41,7 +41,7 @@ def main(cfg,keyword=None,max_news=None,summ_option=None):
     print(f.renderText('!!Welcome to News Breeze!!'))
     try:
         guisetup(cfg)
-        dpg.create_viewport(title='CS50P Final Project', width=900, height=600)
+        dpg.create_viewport(title = 'CS50P Final Project', width = 900, height = 600)
         dpg.setup_dearpygui()
         dpg.show_viewport()
         dpg.create_context()  
@@ -59,35 +59,35 @@ def guisetup(cfg):
     width, height, channels, data = dpg.load_image(cfg.images.logo)
     width2, height2, channels2, data2 = dpg.load_image(cfg.images.dalle)
     width3, height3, channels3, data3 = dpg.load_image(cfg.images.dalle2)
-    with dpg.texture_registry(show=False):
-        dpg.add_static_texture(width=width,
-                                height=height, 
-                                default_value=data,
-                                tag="texture_tag")
-    with dpg.texture_registry(show=False):
-        dpg.add_static_texture(width=width2,
-                                height=height2, 
-                                default_value=data2,
-                                tag="texture_tag2")
-    with dpg.texture_registry(show=False):
-        dpg.add_static_texture(width=width3,
-                                height=height3, 
-                                default_value=data3,
-                                tag="texture_tag3")    
-    with dpg.window(label="News Breeze",height=800,width=800,id=1):
+    with dpg.texture_registry(show = False):
+        dpg.add_static_texture(width = width,
+                                height = height, 
+                                default_value = data,
+                                tag = "texture_tag")
+    with dpg.texture_registry(show = False):
+        dpg.add_static_texture(width = width2,
+                                height = height2, 
+                                default_value = data2,
+                                tag = "texture_tag2")
+    with dpg.texture_registry(show = False):
+        dpg.add_static_texture(width = width3,
+                                height = height3, 
+                                default_value = data3,
+                                tag = "texture_tag3")    
+    with dpg.window(label = "News Breeze", height = 800, width = 800, id = 1):
         # Set as primary window
         #dpg.set_primary_window(1, True)
-        dpg.add_image("texture_tag",width =800, height=300,pos=(0,0))
-        dpg.add_image("texture_tag2",width =100, height=100,pos=(660,435))
-        dpg.add_image("texture_tag3",width =100, height=100,pos=(10,330))
+        dpg.add_image("texture_tag", width = 800, height = 300, pos = (0,0))
+        dpg.add_image("texture_tag2", width = 100, height = 100, pos = (660,435))
+        dpg.add_image("texture_tag3", width = 100, height = 100, pos = (10,330))
         dpg.add_separator()
-        dpg.add_spacing(count=5)
-        dpg.add_text("Welcome to News Breeze\n",pos=(280,250),color=[115, 147, 179])
+        dpg.add_spacing(count = 5)
+        dpg.add_text("Welcome to News Breeze\n", pos = (280, 250), color = [115, 147, 179])
         dpg.add_text("""Your very own News Scraper and Summarizer.""",
-                    color=[115, 147, 179],pos=(180,270))
-        dpg.add_spacing(count=14)
-        dpg.add_input_text(tag='Keyword_Input',pos=(120,340),width=540,hint="Please Specify a keyword e.g. Covid 19 ",use_internal_label=False)
-        dpg.add_slider_int(tag='Max_News', label =' Max_News',pos=(120,380),width=540,default_value=3, max_value=5,clamped=True,min_value=1)         
+                    color=[115, 147, 179], pos = (180, 270))
+        dpg.add_spacing(count = 14)
+        dpg.add_input_text(tag = 'Keyword_Input', pos = (120, 340), width = 540, hint = "Please Specify a keyword e.g. Covid 19 ", use_internal_label = False)
+        dpg.add_slider_int(tag = 'Max_News', label = ' Max_News', pos = (120, 380), width = 540, default_value = 3, max_value = 5, clamped = True, min_value = 1)         
         dpg.add_checkbox(tag='Summary_Input',pos=(620,533),use_internal_label=False,enabled=True)
         with dpg.group(horizontal=True):
             dpg.add_loading_indicator(label="Please Wait",circle_count=4,pos=(70,230))
