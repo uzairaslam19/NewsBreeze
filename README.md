@@ -23,7 +23,7 @@
 - [LICENSE](#configuration)
 - [Acknowledgements](#acknowledgements)
 
-<img src="images/Dall-E.png" alt="Dall-e" width="100" height="100">
+<img src="images/DALL-E.png" alt="Dall-e" width="100" height="100">
 
 ## __Description__
 
