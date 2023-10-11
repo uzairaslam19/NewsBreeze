@@ -5,7 +5,7 @@ from scrapy.crawler import CrawlerRunner
 from Scrapy_Project.scrapenews.spiders.new_spider import News_Spider
 import dearpygui.dearpygui as dpg
 from twisted.internet import reactor
-from Clean_News.clean import Clean_News
+from Clean_News.clean import CleanNews
 from summarize.summarize import Summarize
 import warnings
 import logging
@@ -212,7 +212,7 @@ def clean_text(cfg):
     Args:
         cfg: Hydra configuration object.
     """
-    cleaner = Clean_News()
+    cleaner = CleanNews()
     #Take the input/output file path from hydra config
     json_file_path = cfg.path.json_output
     output_json_path = cfg.path.cleaned_json_output
