@@ -111,18 +111,13 @@ pipenv install --dev
 # perform unittest
 pipenv run pytest
 ```
-
-</br>
-<hr>
-</br>
 <img src="images/dall5.png" alt="Dall-e" width="100" height="100">
+
 ## __Usage__
 To Get started, simply run the command `python3 project.py` and this will launch the DearpyGui app, once the app is launched, provide a keyword or multiple keywords, select the total number of news articles you want,( for now i have set max number at 5). Then simply click `"Get News"` button. This will initiate the scrapy spider, and after scraping the relevant articles, dump the data into a json file. The app then takes the data from the json file, extracts the `Title`, `Author` and `Published date` and displays it on the GUI. Now you have the option of getting the summary of the news. With how busy our lives are, no one has the time to read through thousands of words or article for a single topic. Rather why not have GPT to summarise the news in a few lines for us. This is exactly what the APP does. Once you `check the summarise box` and click on the `"Summarise"` Button. The cleaner module will take over, and using Spacy module it will preprocess the data, and pass it to the summariser module which basically calls OPENAI's GPT 3.5 API to summarise the content of the news articles in a few lines. And Viola in a few seconds you have a short quick summary of the necessary news articles.
 
-
 ## __LICENSE__
 Distributed under the MIT License. See LICENSE for more information.
-
 
 ## __Acknowledgements__
 
