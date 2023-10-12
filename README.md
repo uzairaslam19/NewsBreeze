@@ -1,5 +1,5 @@
 
-<h1>  News Breeze: A scraping and Summarizing app</- CS50 Final Projecth1>
+<h1>  News Breeze: A Scraping and Summarizing app</- CS50 Final Projecth1>
 
 #### [![Video Demo][video]][video-url] 
 [![Linkedin][linkedin]][linkedin-url]
