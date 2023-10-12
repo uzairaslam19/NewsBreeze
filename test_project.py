@@ -78,7 +78,7 @@ class TestScript(unittest.TestCase):
             temp_file_path = temp_file.name
 
         # Mock the Clean_News module and function
-        with patch('project.Clean_News') as MockCleanNews:
+        with patch('project.CleanNews') as MockCleanNews:
             mock_clean_news_instance = MockCleanNews.return_value
             mock_clean_news_instance.news_list.return_value = None
 
