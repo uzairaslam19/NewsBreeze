@@ -49,6 +49,7 @@ The News Scraping and Summarization App is a simple Python application that allo
 * `project.py:` Main project code.
 * `test_project.py:` Unit tests for the code.
 
+<img src="images/DALL3.png" alt="Dall-e" width="100" height="100">
 
 ## __Features__
 
@@ -58,6 +59,8 @@ The News Scraping and Summarization App is a simple Python application that allo
 - Real-time feedback on the scraping progress.
 - Customizable configuration using Hydra.
 - Logging information such as Errors, Warnings.
+- 
+<img src="images/DALL4.png" alt="Dall-e" width="100" height="100">
 
 ## __Getting Started__
 Follow these steps to run the project in your local 
